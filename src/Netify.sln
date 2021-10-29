@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netify", "Netify\Netify.csproj", "{4C4DC62A-DEA5-49FD-BFAB-9D3367633603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netify.Demo", "Netify.Demo\Netify.Demo.csproj", "{B1FCBA83-04EF-4E8F-AEFD-1C44C1F8B46B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netify.Tests", "Netify.Tests\Netify.Tests.csproj", "{7ABBBD83-1A26-4255-ABEA-ED3C41B3355D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C4DC62A-DEA5-49FD-BFAB-9D3367633603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4DC62A-DEA5-49FD-BFAB-9D3367633603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4DC62A-DEA5-49FD-BFAB-9D3367633603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4DC62A-DEA5-49FD-BFAB-9D3367633603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FCBA83-04EF-4E8F-AEFD-1C44C1F8B46B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FCBA83-04EF-4E8F-AEFD-1C44C1F8B46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FCBA83-04EF-4E8F-AEFD-1C44C1F8B46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FCBA83-04EF-4E8F-AEFD-1C44C1F8B46B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ABBBD83-1A26-4255-ABEA-ED3C41B3355D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ABBBD83-1A26-4255-ABEA-ED3C41B3355D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ABBBD83-1A26-4255-ABEA-ED3C41B3355D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ABBBD83-1A26-4255-ABEA-ED3C41B3355D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62CA1CFB-F924-4B56-A953-B52D6E0DB849}
+	EndGlobalSection
+EndGlobal
