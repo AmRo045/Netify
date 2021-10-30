@@ -1,10 +1,20 @@
 ﻿namespace Netify.Demo
 {
-    public partial class MainWindow
+    public partial class MainWindow : INetworkObserver
     {
-        public MainWindow()
+        private readonly INetworkStatusNotifier _networkStatusNotifier;
+
+        public MainWindow(INetworkStatusNotifier networkStatusNotifier)
         {
+            _networkStatusNotifier = networkStatusNotifier;
+            _networkStatusNotifier.AddObserver(this);
+
             InitializeComponent();
+        }
+
+        public void ConnectivityChanged(ConnectivityStatus status)
+        {
+            
         }
     }
 }
