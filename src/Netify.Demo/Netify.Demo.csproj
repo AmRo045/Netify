@@ -8,6 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\Connected.png" />
+    <None Remove="Resources\Images\Disconnected.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Images\Connected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Disconnected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Netify\Netify.csproj" />
   </ItemGroup>
 
