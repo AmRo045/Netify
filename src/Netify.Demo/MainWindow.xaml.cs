@@ -1,4 +1,8 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace Netify.Demo
@@ -82,6 +86,22 @@ namespace Netify.Demo
         {
             var currentStatus = _networkStatusNotifier.CheckNow();
             UpdateUI(currentStatus);
+        }
+
+        private void LinkButtonClicked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (sender is Button button)
+                {
+                    var url = button.Tag.ToString();
+                    _ = Process.Start(new ProcessStartInfo { FileName = url!, UseShellExecute = true });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
