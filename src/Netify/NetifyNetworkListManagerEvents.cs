@@ -5,7 +5,6 @@ using System.Runtime.InteropServices.ComTypes;
 
 namespace Netify
 {
-
     internal class NetifyNetworkListManagerEvents : INetifyNetworkListManagerEvents
     {
         private readonly NetworkListManager _networkListManager = new();

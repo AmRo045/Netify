@@ -5,11 +5,121 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="Netify Demo" 
-    Height="450" 
-    Width="800"
-    WindowStartupLocation="CenterScreen">
-    <Grid>
+    xmlns:local="clr-namespace:Netify.Demo"
+    Title="Netify Demo"
+    MinWidth="540"
+    MinHeight="500"
+    Width="540"
+    Height="500"
+    WindowStartupLocation="CenterScreen"
+    Background="#1c2029"
+    Foreground="#717e8a"
+    TextElement.FontFamily="Consolas">
 
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="PrimaryButton">
+            <Setter Property="Margin" Value="8, 6" />
+            <Setter Property="Padding" Value="16, 8" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Background" Value="#292f3d" />
+            <Setter Property="Foreground" Value="#9ea5ac" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            CornerRadius="4"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentPresenter 
+                                TextElement.Foreground="{TemplateBinding Foreground}"
+                                Content="{TemplateBinding Content}"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#373d4b" />
+                            </Trigger>
+
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.54" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Image 
+            Source="{Binding ConnectionStatusImage, FallbackValue={x:Static local:Constants.DisconnectedImage}}"
+            Width="124" 
+            Height="124"/>
+
+        <TextBlock 
+            Grid.Row="1"
+            Margin="0,24,0,0"
+            FontSize="32"
+            Text="Network Aware App" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"/>
+
+        <TextBlock 
+            Grid.Row="2"
+            Margin="16,8,16,24"
+            FontSize="18"
+            Opacity="0.86"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            Text="Change your connection status to see app reaction." 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"/>
+
+        <Border
+            Grid.Row="3"
+            Margin="0,8"
+            Padding="12"
+            CornerRadius="4"
+            BorderThickness="4"
+            Background="{Binding ConnectionStatusBrush, FallbackValue={x:Static local:Constants.DisconnectedBrush}}"
+            HorizontalAlignment="Center">
+            <TextBlock 
+                    Text="{Binding ConnectionStatusText, FallbackValue={x:Static local:Constants.DisconnectedText}}"
+                    FontSize="24"
+                    Foreground="#000000"/>
+        </Border>
+
+        <StackPanel 
+            HorizontalAlignment="Center" 
+            Grid.Row="4" 
+            Margin="0,18,0,0"
+            Orientation="Horizontal">
+            <Button 
+                Style="{StaticResource PrimaryButton}"
+                Tag="{x:Static local:Constants.GitHubPageUrl}"
+                Content="GitHub"
+                Click="LinkButtonClicked"/>
+
+            <Button 
+                Style="{StaticResource PrimaryButton}"
+                Tag="{x:Static local:Constants.NugetPageUrl}"
+                Content="Nuget"
+                Click="LinkButtonClicked"/>
+        </StackPanel>
     </Grid>
 </Window>
