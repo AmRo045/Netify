@@ -1,7 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net452;netcoreapp3.1</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>AmRo</Authors>
+    <Description>Instantly get notified when network connection changes.</Description>
+    <PackageProjectUrl>https://github.com/AmRo045/Netify</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AmRo045/Netify</RepositoryUrl>
+    <PackageTags>internet, network, connection, nlm, network-events, net</PackageTags>
+    <PackageReleaseNotes>This is the first release of the library.</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>Netify.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +25,17 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\icon\Netify.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
