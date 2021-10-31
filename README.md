@@ -1,5 +1,5 @@
-<div style="text-align: center">
-    <img src="docs/icon/netify.png" alt="Netify icon" />
+<div align="center">
+    <img src="docs/icon/Netify.png" alt="Netify icon" />
     <h1>Netify</h1>
     <p>Instantly get notified when the network connection changes.</p>
     <a href="https://www.nuget.org/packages/Netify/">
@@ -11,11 +11,15 @@
 
 You can add Netify to your project using .NET CLI:
 
-`dotnet add package Netify`
+```
+dotnet add package Netify
+```
 
 or NuGet package manager console:
 
-`Install-Package Netify`
+```
+Install-Package Netify
+```
 
 ## Example Usage
 
@@ -51,8 +55,7 @@ internal class SampleApp : INetworkObserver
 ```
 
 ## Demo App
-
-<div style="text-align: center">
+<p align="center">
     <img src="docs/screenshots/connected.png" alt="Netify Demo App - Connected" />
     <img src="docs/screenshots/disconnected.png" alt="Netify Demo App - Disconnected" />
-</div>
+</p>
