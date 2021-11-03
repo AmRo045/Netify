@@ -4,7 +4,7 @@ namespace Netify
 {
     public class NetworkStatusNotifier : INetworkStatusNotifier
     {
-        private readonly HashSet<INetworkObserver> _observers = new();
+        private readonly HashSet<INetworkObserver> _observers;
         private readonly INetifyNetworkListManagerEvents _networkListManagerEvents;
 
         public NetworkStatusNotifier()
