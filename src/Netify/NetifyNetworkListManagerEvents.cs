@@ -1,4 +1,4 @@
-﻿using NETWORKLIST;
+﻿using Netify.Core;
 using System;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;

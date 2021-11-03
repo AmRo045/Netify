@@ -1,4 +1,4 @@
-﻿using NETWORKLIST;
+﻿using Netify.Core;
 using System;
 
 namespace Netify
