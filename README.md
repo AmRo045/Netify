@@ -54,7 +54,12 @@ internal class SampleApp : INetworkObserver
 }
 ```
 
+## Supported Platforms
+
+- Windows
+
 ## Demo App
+
 <p align="center">
     <img src="docs/screenshots/connected.png" alt="Netify Demo App - Connected" />
     <img src="docs/screenshots/disconnected.png" alt="Netify Demo App - Disconnected" />
