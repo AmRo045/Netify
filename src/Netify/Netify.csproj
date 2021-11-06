@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Version>1.1.1</Version>
     <TargetFrameworks>net452;netcoreapp3.1</TargetFrameworks>
     <LangVersion>9.0</LangVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -9,18 +10,13 @@
     <PackageProjectUrl>https://github.com/AmRo045/Netify</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AmRo045/Netify</RepositoryUrl>
     <PackageTags>internet, network, connection, nlm, network-events, net</PackageTags>
-    <PackageReleaseNotes>This is the first release of the library.</PackageReleaseNotes>
+    <PackageReleaseNotes>Remove COM type library reference</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>Netify.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\..\docs\icon\Netify.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
